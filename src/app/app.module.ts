@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { MainProgramComponent } from './main-program/main-program.component';
 import { DeformityCorrectionCourseComponent } from './deformity-correction-course/deformity-correction-course.component';
+import { OrganizingCommitteeComponent } from './organizing-committee/organizing-committee.component';
+import { PospExecutiveBoardComponent } from './posp-executive-board/posp-executive-board.component';
 
 
 
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'main-program', component: MainProgramComponent },
   { path: 'deformity-correction-course', component: DeformityCorrectionCourseComponent },
+  { path: 'app-organizing-committee', component: OrganizingCommitteeComponent },
+  { path: 'app-posp-executive-board', component: PospExecutiveBoardComponent },
   
 
 ];
@@ -33,7 +37,9 @@ const routes: Routes = [
     FooterComponent,
     RegistrationComponent,
     MainProgramComponent,
-    DeformityCorrectionCourseComponent
+    DeformityCorrectionCourseComponent,
+    OrganizingCommitteeComponent,
+    PospExecutiveBoardComponent
   ],
   imports: [
     BrowserModule,

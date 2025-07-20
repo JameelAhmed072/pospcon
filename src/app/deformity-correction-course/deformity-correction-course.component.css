@@ -3,10 +3,8 @@
   padding: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
-/* Title Styling */
 .course-title {
   text-align: center;
   font-size: 2rem;
@@ -23,26 +21,28 @@
   margin-bottom: 2rem;
 }
 
-/* Table Styling */
+/* Table wrapper to allow horizontal scroll on small screens */
 .table-wrapper {
-  display: flex;
-  justify-content: center;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  width: 100%;
 }
 
+/* Responsive table */
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 1000px;
-  min-width: 300px;
-  table-layout: fixed;
+  min-width: 600px; /* Force horizontal scroll if content overflows */
 }
 
 table td {
   border: 1px solid #ccc;
   padding: 0.7rem;
   font-size: 1rem;
-  white-space: nowrap; /* Prevent text wrap */
+  word-wrap: break-word;
+  white-space: normal; /* Allow wrapping */
+  text-align: left;
 }
 
 /* Column specific styling */
@@ -54,8 +54,8 @@ table td:nth-child(3) {
 
 table td:nth-child(2) {
   text-align: left;
-  width: 60%;
   padding-left: 1.2rem;
+  width: 60%;
 }
 
 .session-title {
@@ -66,7 +66,7 @@ table td:nth-child(2) {
   text-align: center;
 }
 
-/* Responsive Typography */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .course-title {
     font-size: 1.5rem;
@@ -81,13 +81,8 @@ table td:nth-child(2) {
     padding: 0.6rem;
   }
 
-  table td:nth-child(1),
-  table td:nth-child(3) {
-    width: 25%;
-  }
-
-  table td:nth-child(2) {
-    width: 50%;
+  table {
+    min-width: 500px;
   }
 }
 
@@ -105,12 +100,7 @@ table td:nth-child(2) {
     padding: 0.5rem;
   }
 
-  table td:nth-child(1),
-  table td:nth-child(3) {
-    width: 30%;
-  }
-
-  table td:nth-child(2) {
-    width: 40%;
+  table {
+    min-width: 400px;
   }
 }

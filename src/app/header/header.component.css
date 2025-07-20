@@ -1,3 +1,21 @@
+
+.hamburger-container {
+  display: none;
+  justify-content: center;
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  background-color: #0a2b89;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
 /* Top Contact Strip */
 .top-bar {
   background-color: #075200;
@@ -118,7 +136,7 @@
 .nav-item.dropdown {
   position: relative;
 }
-.nav-item .dropdown-toggle {
+.dropdown-toggle {
   color: white;
   padding: 16px 20px;
   font-weight: bold;
@@ -126,10 +144,6 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-}
-.nav-item .dropdown-toggle:hover {
-  background-color: #b9c47a;
-  border-radius: 4px;
 }
 .dropdown-menu {
   position: absolute;
@@ -160,17 +174,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hamburger icon for mobile */
-.navbar .icon {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 12px;
-  font-size: 22px;
-  color: white;
-  cursor: pointer;
-}
-
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
   .main-header {
@@ -197,38 +200,49 @@
     font-size: 16px;
   }
 
-  .navbar a {
-    display: none;
-    width: 100%;
-    text-align: left;
-    border-top: 1px solid #1442a6;
-  }
-
-  .navbar.responsive a,
-  .navbar.responsive .nav-item {
-    display: block;
-    width: 100%;
-  }
-
-  .navbar.responsive .dropdown-menu {
-    position: relative;
-    top: 0;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .navbar .icon {
-    display: block;
-  }
-
   .contact-info {
     flex-direction: column;
     gap: 8px;
     font-size: 13px;
     text-align: center;
   }
+  .hamburger-container {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    background-color: #0a2b89;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .navbar.responsive {
+    display: flex;
+  }
+
+  .navbar a,
+  .navbar .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border-top: 1px solid #ffffff33;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #0a2b89;
+  }
 
   .dropdown-menu a {
-    padding: 10px 18px;
+    color: white;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #b9c47a;
+    color: #004589;
   }
 }

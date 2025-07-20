@@ -13,10 +13,6 @@ export class HeaderComponent {
   menuOpen = false;
   dropdownOpen = false;
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
   goToRegistration() {
     this.router.navigate(['/registration']);
   }
@@ -30,7 +26,5 @@ onMouseLeave() {
   this.dropdownOpen = false;
 }
 
-toggleDropdown() {
-  this.dropdownOpen = !this.dropdownOpen;
-}
+
 }

@@ -23,22 +23,29 @@
 
 <!-- Navigation -->
 
+<!-- Hamburger Icon -->
+<div class="hamburger-container">
+  <div class="hamburger" (click)="menuOpen = !menuOpen">
+    &#9776;
+  </div>
+</div>
+
+<!-- Navigation -->
 <nav [ngClass]="{'navbar': true, 'responsive': menuOpen}">
-  <a routerLink="/">HOME</a>
-  <a href="#">ORGANIZING COMMITTEE</a>
-  <a href="#">POSP EXECUTIVE BOARD</a>
-  <a routerLink="/registration">REGISTRATION</a>
-    <!-- Beautiful Dropdown -->
-  <div class="nav-item dropdown" [class.open]="dropdownOpen" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-    <a href="javascript:void(0)" class="dropdown-toggle" (click)="toggleDropdown()">SCIENTIFIC PROGRAM ▾</a>
+  <a routerLink="/" (click)="menuOpen = false">HOME</a>
+  <a routerLink="/app-organizing-committee" (click)="menuOpen = false">ORGANIZING COMMITTEE</a>
+  <a routerLink="/app-posp-executive-board" (click)="menuOpen = false">POSP EXECUTIVE BOARD</a>
+  <a routerLink="/registration" (click)="menuOpen = false">REGISTRATION</a>
+
+  <!-- Dropdown -->
+  <div class="nav-item dropdown" [class.open]="dropdownOpen"
+       (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <a href="javascript:void(0)" class="dropdown-toggle">SCIENTIFIC PROGRAM ▾</a>
     <div class="dropdown-menu" *ngIf="dropdownOpen">
-      <a routerLink="/main-program">MAIN PROGRAM</a>
-      <a routerLink="/deformity-correction-course">DEFORMITY CORRECTION COURSE</a>
+      <a routerLink="/main-program" (click)="menuOpen = false">MAIN PROGRAM</a>
+      <a routerLink="/deformity-correction-course" (click)="menuOpen = false">DEFORMITY CORRECTION COURSE</a>
     </div>
   </div>
-  <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </a>
 </nav>
 
 <!-- <app-home></app-home> -->
