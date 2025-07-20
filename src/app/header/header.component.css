@@ -1,0 +1,234 @@
+/* Top Contact Strip */
+.top-bar {
+  background-color: #075200;
+  color: white;
+  font-size: 14px;
+  padding: 6px 15px;
+}
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.contact-info i {
+  margin-right: 5px;
+}
+
+/* Main Header */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+
+.logo-section div {
+  max-width: 600px;
+}
+
+.main-header h1 {
+  color: #003366;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.main-header h2 {
+  color: #a11a4d;
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.main-header p {
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Register Button */
+.register-btn {
+  background-color: #d8b76e;
+  border: none;
+  padding: 18px 30px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  color: #111;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.register-btn:hover {
+  background-color: #b9c47a;
+  transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0a2b89;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar a {
+  padding: 16px 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+  background-color: #b9c47a;
+  border-radius: 4px;
+}
+
+/* Dropdown styles */
+.nav-item.dropdown {
+  position: relative;
+}
+.nav-item .dropdown-toggle {
+  color: white;
+  padding: 16px 20px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.nav-item .dropdown-toggle:hover {
+  background-color: #b9c47a;
+  border-radius: 4px;
+}
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.dropdown-menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #c0c381;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+.dropdown-menu a:hover {
+  background-color: #b9c47a;
+  color: #004589;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hamburger icon for mobile */
+.navbar .icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-section div {
+    max-width: 90%;
+  }
+
+  .register-btn {
+    align-self: center;
+    width: 90%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .navbar a {
+    display: none;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #1442a6;
+  }
+
+  .navbar.responsive a,
+  .navbar.responsive .nav-item {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar.responsive .dropdown-menu {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .navbar .icon {
+    display: block;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 18px;
+  }
+}

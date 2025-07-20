@@ -1,0 +1,36 @@
+.footer-container {
+  background-color: #ccc; /* Light gray background */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-item {
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.footer-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem auto;
+  background-color: #003366; /* Dark blue */
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 3px solid #89a8c8; /* Light border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827; /* Almost black */
+  line-height: 1.5;
+}

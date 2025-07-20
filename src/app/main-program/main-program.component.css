@@ -1,0 +1,128 @@
+.program-container {
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Title */
+.main-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000b3e;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.main-title sup {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
+/* Subtitle & Day Info */
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #000b3e;
+}
+
+.day-info {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Left Aligned Session Details */
+.session-block {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 870px;
+  margin: 5rem auto 2rem auto;
+  text-align: left;
+  padding-left: none;
+}
+
+/* Table */
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 870px;
+  min-width: 300px;
+}
+
+table td {
+  border: 1px solid #ccc;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Inauguration */
+.inauguration {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .day-info {
+    font-size: 1rem;
+  }
+
+  table td {
+    font-size: 0.9rem;
+  }
+
+  .session-block {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .day-info {
+    flex-direction: column;
+    font-size: 0.95rem;
+  }
+
+  .session-block {
+    font-size: 0.9rem;
+    padding-left: 0;
+  }
+
+  .inauguration {
+    font-size: 1rem;
+  }
+}

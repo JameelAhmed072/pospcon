@@ -1,0 +1,45 @@
+<!-- Top Info Strip -->
+<div class="top-bar">
+  <div class="contact-info">
+    <span><i class="fas fa-phone-alt"></i> 0334-3345607</span>
+    <span><i class="fas fa-envelope"></i> pospconference@gmail.com</span>
+    <span><i class="fas fa-map-marker-alt"></i> Balochistan Institute Of Child Health Service BICHQ.</span>
+  </div>
+</div>
+
+<!-- Header Section -->
+<header class="main-header">
+  <div class="logo-section">
+    <img src="/assets/pk.png" alt="POSPCON Logo" class="logo" />
+    <div>
+      <h1>POSPCON - 2026</h1>
+      <h2>11TH ANNUAL CONFERENCE OF PAEDIATRIC ORTHOPAEDIC SOCIETY OF PAKISTAN</h2>
+      <p>Date: 20th - 22nd February 2026</p>
+    </div>
+  </div>
+
+  <button class="register-btn" (click)="goToRegistration()">Register Now →</button>
+</header>
+
+<!-- Navigation -->
+
+<nav [ngClass]="{'navbar': true, 'responsive': menuOpen}">
+  <a routerLink="/">HOME</a>
+  <a href="#">ORGANIZING COMMITTEE</a>
+  <a href="#">POSP EXECUTIVE BOARD</a>
+  <a routerLink="/registration">REGISTRATION</a>
+    <!-- Beautiful Dropdown -->
+  <div class="nav-item dropdown" [class.open]="dropdownOpen" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <a href="javascript:void(0)" class="dropdown-toggle" (click)="toggleDropdown()">SCIENTIFIC PROGRAM ▾</a>
+    <div class="dropdown-menu" *ngIf="dropdownOpen">
+      <a routerLink="/main-program">MAIN PROGRAM</a>
+      <a routerLink="/deformity-correction-course">DEFORMITY CORRECTION COURSE</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </a>
+</nav>
+
+<!-- <app-home></app-home> -->
+

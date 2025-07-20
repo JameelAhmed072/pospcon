@@ -1,0 +1,125 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-image {
+  width: 100%;
+  max-width: 1024px;
+  height: 16rem; /* default: h-64 */
+  object-fit: cover;
+  object-position: top; /* ensures top part of image is visible */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .home-image {
+    height: 18rem; /* sm:h-72 */
+  }
+}
+
+@media (min-width: 768px) {
+  .home-image {
+    height: 20rem; /* md:h-80 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-image {
+    height: 24rem; /* lg:h-96 */
+  }
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #1e3a8a; /* Tailwind's blue-900 */
+}
+
+@media (min-width: 640px) {
+  .home-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+}
+
+.home-paragraph {
+  color: #374151; /* Tailwind's gray-700 */
+  margin-top: 1rem;
+  max-width: 1024px;
+  text-align: justify;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .home-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 389px) {
+  .home-image {
+    height: 12rem; /* Slightly smaller for tight mobile widths */
+  }
+}
+
+
+/* ----------------            team for home page       ------------------------------ */
+
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 1rem;
+}
+
+.team-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f59e0b;
+  letter-spacing: 2px;
+  margin-top: 0.25rem;
+}
+
