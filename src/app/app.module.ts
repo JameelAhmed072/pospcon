@@ -12,6 +12,8 @@ import { MainProgramComponent } from './main-program/main-program.component';
 import { DeformityCorrectionCourseComponent } from './deformity-correction-course/deformity-correction-course.component';
 import { OrganizingCommitteeComponent } from './organizing-committee/organizing-committee.component';
 import { PospExecutiveBoardComponent } from './posp-executive-board/posp-executive-board.component';
+import { PreConferenceWorkshopsComponent } from './pre-conference-workshops/pre-conference-workshops.component';
+import { NationalInternationalFacultyComponent } from './national-international-faculty/national-international-faculty.component';
 
 
 
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'deformity-correction-course', component: DeformityCorrectionCourseComponent },
   { path: 'app-organizing-committee', component: OrganizingCommitteeComponent },
   { path: 'app-posp-executive-board', component: PospExecutiveBoardComponent },
+  { path: 'pre-conference-workshops', component: PreConferenceWorkshopsComponent },
+  { path: 'national-international-faculty', component: NationalInternationalFacultyComponent }
   
 
 ];
@@ -39,7 +43,9 @@ const routes: Routes = [
     MainProgramComponent,
     DeformityCorrectionCourseComponent,
     OrganizingCommitteeComponent,
-    PospExecutiveBoardComponent
+    PospExecutiveBoardComponent,
+    PreConferenceWorkshopsComponent,
+    NationalInternationalFacultyComponent
   ],
   imports: [
     BrowserModule,

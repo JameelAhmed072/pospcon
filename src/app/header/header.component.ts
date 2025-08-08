@@ -11,19 +11,22 @@ export class HeaderComponent {
 
   constructor(private router: Router) {}
   menuOpen = false;
-  dropdownOpen = false;
+  dropdownOpen1 = false;
+  dropdownOpen2 = false;
 
   goToRegistration() {
     this.router.navigate(['/registration']);
   }
 
 
-  onMouseEnter() {
-  this.dropdownOpen = true;
+  onMouseEnter(menu: number) {
+  if (menu === 1) this.dropdownOpen1 = true;
+  if (menu === 2) this.dropdownOpen2 = true;
 }
 
-onMouseLeave() {
-  this.dropdownOpen = false;
+onMouseLeave(menu: number) {
+  if (menu === 1) this.dropdownOpen1 = false;
+  if (menu === 2) this.dropdownOpen2 = false;
 }
 
 

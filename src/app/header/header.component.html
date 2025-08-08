@@ -2,8 +2,8 @@
 <div class="top-bar">
   <div class="contact-info">
     <span><i class="fas fa-phone-alt"></i> 0334-3345607</span>
-    <span><i class="fas fa-envelope"></i> pospconference@gmail.com</span>
-    <span><i class="fas fa-map-marker-alt"></i> Balochistan Institute Of Child Health Service BICHQ.</span>
+    <span><i class="fas fa-envelope"></i> pospcon2026qta@gmail.com</span>
+    <span><i class="fas fa-map-marker-alt"></i> Serena hotel quetta | post graduate medical institute quetta</span>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
     <div>
       <h1>POSPCON - 2026</h1>
       <h2>11TH ANNUAL CONFERENCE OF PAEDIATRIC ORTHOPAEDIC SOCIETY OF PAKISTAN</h2>
-      <p>Date: 20th - 22nd February 2026</p>
+      <p>Date: 2nd - 4th April 2026</p>
     </div>
   </div>
 
@@ -37,15 +37,27 @@
   <a routerLink="/app-posp-executive-board" (click)="menuOpen = false">POSP EXECUTIVE BOARD</a>
   <a routerLink="/registration" (click)="menuOpen = false">REGISTRATION</a>
 
-  <!-- Dropdown -->
-  <div class="nav-item dropdown" [class.open]="dropdownOpen"
-       (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-    <a href="javascript:void(0)" class="dropdown-toggle">SCIENTIFIC PROGRAM ▾</a>
-    <div class="dropdown-menu" *ngIf="dropdownOpen">
-      <a routerLink="/main-program" (click)="menuOpen = false">MAIN PROGRAM</a>
-      <a routerLink="/deformity-correction-course" (click)="menuOpen = false">DEFORMITY CORRECTION COURSE</a>
-    </div>
+<!-- Scientific Program -->
+<div class="nav-item dropdown" [class.open]="dropdownOpen1"
+     (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave(1)">
+  <a href="javascript:void(0)" class="dropdown-toggle">SCIENTIFIC PROGRAM ▾</a>
+  <div class="dropdown-menu" *ngIf="dropdownOpen1">
+    <a routerLink="/main-program" (click)="menuOpen = false">MAIN PROGRAM</a>
+    <a routerLink="/deformity-correction-course" (click)="menuOpen = false">DEFORMITY CORRECTION COURSE</a>
   </div>
+</div>
+
+<!-- Workshops & Faculties -->
+<div class="nav-item dropdown" [class.open]="dropdownOpen2"
+     (mouseenter)="onMouseEnter(2)" (mouseleave)="onMouseLeave(2)">
+  <a href="javascript:void(0)" class="dropdown-toggle">Workshops & Faculties ▾</a>
+  <div class="dropdown-menu" *ngIf="dropdownOpen2">
+    <a routerLink="/pre-conference-workshops" (click)="menuOpen = false">Pre-Conference Workshops</a>
+    <a routerLink="/national-international-faculty" (click)="menuOpen = false">National/International Faculty</a>
+  </div>
+</div>
+
+
 </nav>
 
 <!-- <app-home></app-home> -->
