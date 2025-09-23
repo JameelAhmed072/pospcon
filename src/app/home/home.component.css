@@ -85,27 +85,109 @@
 
 
 .team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns for desktop */
   gap: 2rem;
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Extra small devices (≤480px) - 1 column */
+@media (max-width: 480px) {
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Small mobile devices (481px-640px) - 1 column */
+@media (min-width: 481px) and (max-width: 640px) {
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+/* Small tablets (641px-768px) - 2 columns */
+@media (min-width: 641px) and (max-width: 768px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Medium tablets (769px-1024px) - 3 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Large tablets (1025px-1199px) - 4 columns */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .team-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+/* Desktop (1200px-1599px) - 5 columns (default) */
+
+/* Large desktop screens (≥1600px) - 5 columns with more space */
+@media (min-width: 1600px) {
+  .team-container {
+    max-width: 1400px;
+    gap: 2.5rem;
+    padding: 3rem 1rem;
+  }
+}
+
 .team-member {
-  flex: 1 1 250px;
-  max-width: 300px;
   text-align: center;
 }
 
 .team-image {
   width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height for all team images */
   border-radius: 8px;
   object-fit: cover;
+  object-position: center top; /* Position to show the top part of images */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive image heights */
+@media (max-width: 480px) {
+  .team-image {
+    height: 280px; /* Extra large on extra small devices */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .team-image {
+    height: 250px; /* Large on small mobile */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .team-image {
+    height: 220px; /* Medium on small tablets */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-image {
+    height: 180px; /* Smaller on medium tablets */
+  }
+}
+
+@media (min-width: 1600px) {
+  .team-image {
+    height: 240px; /* Larger on big screens */
+  }
 }
 
 .team-name {
@@ -115,11 +197,84 @@
   margin-top: 1rem;
 }
 
+/* Responsive team name font sizes */
+@media (max-width: 480px) {
+  .team-name {
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .team-name {
+    font-size: 1.4rem;
+    margin-top: 0.875rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .team-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-name {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .team-name {
+    font-size: 1.3rem;
+    margin-top: 1.25rem;
+  }
+}
+
 .team-title {
   font-size: 0.9rem;
   font-weight: 600;
   color: #f59e0b;
   letter-spacing: 2px;
   margin-top: 0.25rem;
+}
+
+/* Responsive team title font sizes */
+@media (max-width: 480px) {
+  .team-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .team-title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 0.375rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .team-title {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .team-title {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .team-title {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
+    margin-top: 0.5rem;
+  }
 }
 

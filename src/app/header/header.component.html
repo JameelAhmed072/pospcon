@@ -53,7 +53,17 @@
   <a href="javascript:void(0)" class="dropdown-toggle">Workshops & Faculties ▾</a>
   <div class="dropdown-menu" *ngIf="dropdownOpen2">
     <a routerLink="/pre-conference-workshops" (click)="menuOpen = false">Pre-Conference Workshops</a>
-    <a routerLink="/national-international-faculty" (click)="menuOpen = false">National/International Faculty</a>
+    
+    <!-- Faculty Nested Dropdown -->
+    <div class="nav-item dropdown nested-dropdown" 
+         (mouseenter)="onFacultyMouseEnter()" 
+         (mouseleave)="onFacultyMouseLeave()">
+      <a href="javascript:void(0)" class="dropdown-toggle nested-toggle">Faculty ▶</a>
+      <div class="dropdown-menu nested-menu" *ngIf="facultyDropdownOpen">
+        <a routerLink="/national-faculty" (click)="menuOpen = false">National Faculty</a>
+        <a routerLink="/international-faculty" (click)="menuOpen = false">International Faculty</a>
+      </div>
+    </div>
   </div>
 </div>
 

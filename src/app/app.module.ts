@@ -13,7 +13,8 @@ import { DeformityCorrectionCourseComponent } from './deformity-correction-cours
 import { OrganizingCommitteeComponent } from './organizing-committee/organizing-committee.component';
 import { PospExecutiveBoardComponent } from './posp-executive-board/posp-executive-board.component';
 import { PreConferenceWorkshopsComponent } from './pre-conference-workshops/pre-conference-workshops.component';
-import { NationalInternationalFacultyComponent } from './national-international-faculty/national-international-faculty.component';
+import { NationalFacultyComponent } from './national-faculty/national-faculty.component';
+import { InternationalFacultyComponent } from './international-faculty/international-faculty.component';
 
 
 
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'app-organizing-committee', component: OrganizingCommitteeComponent },
   { path: 'app-posp-executive-board', component: PospExecutiveBoardComponent },
   { path: 'pre-conference-workshops', component: PreConferenceWorkshopsComponent },
-  { path: 'national-international-faculty', component: NationalInternationalFacultyComponent }
+  { path: 'national-faculty', component: NationalFacultyComponent },
+  { path: 'international-faculty', component: InternationalFacultyComponent }
   
 
 ];
@@ -45,7 +47,8 @@ const routes: Routes = [
     OrganizingCommitteeComponent,
     PospExecutiveBoardComponent,
     PreConferenceWorkshopsComponent,
-    NationalInternationalFacultyComponent
+    NationalFacultyComponent,
+    InternationalFacultyComponent
   ],
   imports: [
     BrowserModule,
