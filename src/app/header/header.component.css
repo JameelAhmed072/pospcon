@@ -67,14 +67,14 @@
 }
 
 .main-header h1 {
-  color: #003366;
+  /* color: #003366; */
   margin: 0;
   font-size: 24px;
   font-weight: bold;
   word-break: break-word;
 }
 
-.main-header h2 {
+.main-header h2,h1 {
   color: #a11a4d;
   margin: 5px 0;
   font-size: 18px;
