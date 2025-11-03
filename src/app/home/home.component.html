@@ -1,8 +1,31 @@
 <!-- home.component.html -->
 <div class="home-container">
   <div class="home-wrapper">
-    <!-- Replace src with your own image later -->
-    <img src="/assets/Ziarat_Residency1.JPG" alt="POSP" class="home-image" />
+    <!-- Image Slider -->
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <img 
+          *ngFor="let slide of slides; let i = index" 
+          [src]="slide" 
+          alt="POSP Conference" 
+          class="slider-image"
+          [class.active]="i === currentSlide" />
+      </div>
+      
+      <!-- Previous/Next Buttons -->
+      <button class="slider-btn prev-btn" (click)="previousSlide()">❮</button>
+      <button class="slider-btn next-btn" (click)="nextSlide()">❯</button>
+      
+      <!-- Dots Indicator -->
+      <div class="slider-dots">
+        <span 
+          *ngFor="let slide of slides; let i = index" 
+          class="dot" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"></span>
+      </div>
+    </div>
+    
     <h1 class="home-title">
       Welcome to POSPCON Quetta 2026
     </h1>
