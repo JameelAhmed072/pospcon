@@ -1,3 +1,47 @@
+.google-form-row {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* match button max-width */
+  margin: 0.25rem auto 0 auto; /* centers the row */
+}
+
+.google-btn {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.qr-wrapper-side {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 2rem; /* spacing from button */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.qr-image-side {
+  width: 140px;
+  height: auto;
+  border: 2px solid #000b3e;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  background: #fff;
+}
+
+@media (max-width: 680px) {
+  .google-form-row { max-width: 320px; }
+  .qr-wrapper-side {
+    position: static;
+    transform: none;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .qr-image-side { width: 160px; }
+}
 /* Prevent horizontal scrolling on all screens */
 :host {
   display: block;
@@ -87,4 +131,43 @@ body, html {
   .email a {
     font-size: 1rem;
   }
+}
+
+/* QR + Button row */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem auto 0 auto;
+  max-width: 700px;
+}
+
+.qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.qr-image {
+  width: 160px;
+  height: auto;
+  border: 2px solid #000b3e;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  background: #fff;
+}
+
+.qr-caption {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000b3e;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .qr-image { width: 130px; }
 }

@@ -59,12 +59,25 @@
   min-width: 220px;
 }
 
+/* Two-card row - centered alignment */
+.org-row-two {
+  justify-content: center;
+  gap: 48px 64px;
+}
+
+.org-row-two .org-member {
+  flex: 0 1 300px;
+}
+
 @media (max-width: 1000px) {
   .org-row {
     gap: 32px 12px;
   }
   .org-row .org-member {
     max-width: 260px;
+  }
+  .org-row-two {
+    gap: 32px 48px;
   }
 }
 

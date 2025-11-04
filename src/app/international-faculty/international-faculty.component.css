@@ -1,1 +1,170 @@
-/* International Faculty Component Styles */
+/* Responsive Organizing Committee Styles */
+.org-committee-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 32px 8px 0 8px;
+}
+
+.org-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #00113a;
+  text-align: center;
+  margin-bottom: 40px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+
+.org-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.org-table th,
+.org-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.org-table th {
+  background: linear-gradient(135deg, #0a2b89 0%, #1e40af 100%);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.org-table td {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.org-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.org-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.org-table tbody tr:hover {
+  background-color: #e0f2fe;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.org-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Role styling for better visual hierarchy */
+.org-table td:last-child {
+  font-weight: 600;
+  color: #0a2b89;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .org-table {
+    margin: 16px auto;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  
+  .org-table th,
+  .org-table td {
+    padding: 12px 16px;
+  }
+  
+  .org-table th {
+    font-size: 1rem;
+  }
+  
+  .org-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .org-table {
+    margin: 12px 8px;
+    border-radius: 8px;
+  }
+  
+  .org-table th,
+  .org-table td {
+    padding: 10px 12px;
+  }
+  
+  .org-table th {
+    font-size: 0.9rem;
+  }
+  
+  .org-table td {
+    font-size: 0.85rem;
+  }
+  
+  /* Stack table on very small screens */
+  .org-table thead {
+    display: none;
+  }
+  
+  .org-table,
+  .org-table tbody,
+  .org-table tr,
+  .org-table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .org-table tr {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  
+  .org-table td {
+    border: none;
+    padding: 8px 0;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .org-table td:last-child {
+    border-bottom: none;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .org-table td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #0a2b89;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
