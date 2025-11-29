@@ -35,6 +35,8 @@
         <!-- Sessions -->
         <div *ngFor="let s of day.sessions" class="session-block">
             <h3 class="session-title">{{ s.name }} <span *ngIf="s.subtitle">— {{ s.subtitle }}</span> <small *ngIf="s.note" class="note">{{ s.note }}</small></h3>
+            <h4 class="session-title">{{s.chairs}} : Prof. Javid Iqbal, Prof. Sikandar Hayat</h4>
+            <h4 class="session-title">{{s.moderator}} : Dr. M.Aslam Mengal</h4>
             <div class="table-wrapper">
                 <table class="schedule-table">
                     <thead>

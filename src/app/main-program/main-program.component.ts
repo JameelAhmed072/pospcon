@@ -11,6 +11,8 @@ interface Session {
   name: string;           // e.g. Session 1
   subtitle?: string;      // e.g. Hip disorders 1
   note?: string;          // e.g. (Running Tea)
+  chairs?: string;       // Session chairs
+  moderator?: string;    // Session moderator
   rows: ScheduleRow[];    // Rows inside the session
 }
 
@@ -53,6 +55,8 @@ export class MainProgramComponent {
           name: 'Session 1',
           subtitle: 'Hip disorders 1',
             note: '(Running Tea)',
+          chairs: 'Chairs',  
+          moderator: 'Moderator',
           rows: [
             { time: '09:00 – 09:10', topic: 'Free Paper 1.', speaker: 'Dr' },
             { time: '09:10 – 09:20', topic: 'Free Paper 2.', speaker: 'Dr' },
@@ -112,11 +116,11 @@ export class MainProgramComponent {
             { time: '09:10 – 09:20', topic: 'Free Paper 8.', speaker: 'Dr' },
             { time: '09:20 – 09:30', topic: 'Free Paper 9.', speaker: 'Dr' },
             { time: '09:30 – 09:40', topic: 'Question & Answer', type: 'qa' },
-            { time: '09:40 – 10:00', topic: 'CP: Upper limb extremity – Surgical Reconstruction', speaker: 'Marc Sinclair (Physical)' },
-            { time: '10:00 – 10:20', topic: 'CP: Visual gait analysis & Instrumented 3D Gait Analysis', speaker: 'Muharrem Inan (On-line)' },
-            { time: '10:20 – 10:40', topic: 'CP: Spastic Diplegia & Hemiplegia: Jump Gait', speaker: 'Guney Yilmaz (Physical)' },
-            { time: '10:40 – 11:00', topic: 'CP: Spastic Diplegia: Crouch Gait', speaker: 'Anisuddin Bhatti' },
-            { time: '11:00 – 11:30', topic: 'Debate: CP- Outcome of Early interventional & late reconstruction surgery: Four Questions. Botox. Why we get failure. How to improve at home rehabilitation.', speaker: 'Faculty' },
+            { time: '09:40 – 10:00', topic: '', speaker: '' },
+            { time: '10:00 – 10:20', topic: '', speaker: '' },
+            { time: '10:20 – 10:40', topic: '', speaker: '' },
+            { time: '10:40 – 11:00', topic: '', speaker: '' },
+            { time: '11:00 – 11:30', topic: '', speaker: '' },
             { time: '11:30 – 11:50', topic: 'Rest Recreation & Tea @ Pharma exhibition', type: 'break' },
             { time: '11:50 – 12:10', topic: 'CDK: late presentation of Congenital knee dislocations and concomitant DDH', speaker: 'Javed Iqbal' },
             { time: '12:10 – 12:30', topic: 'CPT: Congenital Pseudoarthrosis Tibia :Treatment options', speaker: 'Ashok Johari (On-line)' },

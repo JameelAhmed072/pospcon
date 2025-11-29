@@ -1,1 +1,32 @@
-<p>Work is under processing!</p>
+<div class="workshop-header">
+  <div class="header-content">
+    <span class="pre-title">Pre POSPCON 2026</span>
+    <h1 class="main-title">Quetta One Day Workshop</h1>
+    <h2 class="subtitle">Ponseti Method for Clubfoot Treatment</h2>
+    <div class="event-details">
+      <div class="detail-item">
+        <i class="icon">📅</i>
+        <span>18th October 2025</span>
+      </div>
+      <div class="detail-item">
+        <i class="icon">📍</i>
+        <span>Postgraduate Medical Institute, Quetta</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="image-slider">
+  <div class="slider-container">
+    <div class="slide" *ngFor="let image of images; let i = index" [class.active]="i === currentSlide">
+      <img [src]="image" [alt]="'Workshop Image ' + (i + 1)">
+    </div>
+  </div>
+  <div class="slider-dots">
+    <span *ngFor="let image of images; let i = index" 
+          class="dot" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"></span>
+  </div>
+</div>
+
