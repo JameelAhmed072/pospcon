@@ -10,7 +10,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     '/assets/Ziarat_Residency1.JPG',
     '/assets/princes-of-hope (1).jpg', // Add more image paths here
     '/assets/quetta.jpg',
-    '/assets/princes-of-hope (3).jpg'
+    '/assets/princes-of-hope (3).jpg',
+    '/assets/Hana jheel.png'
   ];
 
   currentSlide = 0;
