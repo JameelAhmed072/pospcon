@@ -1,4 +1,7 @@
-<div class="program-container">
+
+<h1>Work in Progress ...</h1>
+
+<!-- <div class="program-container">
     <section class="hero">
         <h1 class="main-title">{{ title }}</h1>
         <h2 class="conference-code">{{ conferenceCode }}</h2>
@@ -6,11 +9,9 @@
         <p class="venue">{{ venue }}</p>
     </section>
 
-    <!-- Loop days -->
     <div *ngFor="let day of days" class="day-block">
         <h2 class="day-heading">{{ day.label }}: <span class="day-date">{{ day.date }}</span></h2>
 
-        <!-- Pre-conference / events table -->
         <div *ngIf="day.events" class="table-wrapper">
             <table class="schedule-table">
                 <thead>
@@ -32,7 +33,6 @@
 
         <h3 *ngIf="day.heading" class="section-heading">{{ day.heading }}</h3>
 
-        <!-- Sessions -->
         <div *ngFor="let s of day.sessions" class="session-block">
             <h3 class="session-title">{{ s.name }} <span *ngIf="s.subtitle">— {{ s.subtitle }}</span> <small *ngIf="s.note" class="note">{{ s.note }}</small></h3>
             <h4 class="session-title">{{s.chairs}} : Prof. Javid Iqbal, Prof. Sikandar Hayat</h4>
@@ -58,10 +58,9 @@
         </div>
     </div>
 
-    <!-- Adjustable Topics -->
     <div class="adjustable-topics">
         <h2>TOPIC MAY BE ADJUSTED:</h2>
         <ul>
             <li *ngFor="let t of adjustableTopics">{{ t }}</li>
         </ul>
-    </div>
+    </div> -->
