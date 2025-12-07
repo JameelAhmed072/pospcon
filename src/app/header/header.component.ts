@@ -13,7 +13,7 @@ export class HeaderComponent {
   menuOpen = false;
   dropdownOpen1 = false;
   dropdownOpen2 = false;
-  facultyDropdownOpen = false;
+  dropdownOpen3 = false;
 
   goToRegistration() {
     this.router.navigate(['/registration']);
@@ -22,20 +22,13 @@ export class HeaderComponent {
   onMouseEnter(menu: number) {
     if (menu === 1) this.dropdownOpen1 = true;
     if (menu === 2) this.dropdownOpen2 = true;
+    if (menu === 3) this.dropdownOpen3 = true;
   }
 
   onMouseLeave(menu: number) {
     if (menu === 1) this.dropdownOpen1 = false;
     if (menu === 2) this.dropdownOpen2 = false;
-    if (menu === 2) this.facultyDropdownOpen = false;
-  }
-
-  onFacultyMouseEnter() {
-    this.facultyDropdownOpen = true;
-  }
-
-  onFacultyMouseLeave() {
-    this.facultyDropdownOpen = false;
+    if (menu === 3) this.dropdownOpen3 = false;
   }
 
 
