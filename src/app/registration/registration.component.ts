@@ -13,7 +13,12 @@ export class RegistrationComponent {
 
   openGoogleForm(): void {
     // TODO: Replace placeholder URL with actual Google Form link
-    const googleFormUrl = 'https://docs.google.com/forms/d/1QBy5muupEW1eP2ZdeGi6oiBMUCf8EaT7lpSzQaRTe5Q/edit';
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeMWfbymD9g7F5VHTONQuiumj_4hw9M_aMrRUNZkQGeiAtMJQ/viewform';
+    window.open(googleFormUrl, '_blank');
+  }
+    openAbstractForm(): void {
+    // TODO: Replace placeholder URL with actual Google Form link
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc0Zfo0tefAaCmlGWO0C1CYUr1F3ZKJZeIVKWJJzbqaQ-_kbA/viewform';
     window.open(googleFormUrl, '_blank');
   }
 }
