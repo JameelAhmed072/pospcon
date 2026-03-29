@@ -3,7 +3,7 @@
   <div class="contact-info">
     <span><i class="fas fa-phone-alt"></i> 0334-3345607</span>
     <span><i class="fas fa-envelope"></i> pospcon2026qta@gmail.com</span>
-    <span><i class="fas fa-map-marker-alt"></i> Serena hotel quetta | post graduate medical institute quetta</span>
+    <span><i class="fas fa-map-marker-alt"></i>Jinnah Postgraduate Medical Centre (JPMC), Karachi, Pakistan</span>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
 <header class="main-header">
   <div class="logo-section">
     <img src="/assets/logo3.jpeg" alt="POSPCON Logo" class="logo" />
-    <img src="/assets/all-logos-together.png" alt="POSPCON Logo" class="logo" />
+    <img src="/assets/logo-removebg-preview-without_bg.png" alt="POSPCON Logo" class="logo" />
   </div>
 
   <button class="register-btn" (click)="goToRegistration()">Register Now →</button>
@@ -34,21 +34,20 @@
   <a routerLink="/registration" (click)="menuOpen = false">REGISTRATION</a>
 
 <!-- Scientific Program -->
-<div class="nav-item dropdown" [class.open]="dropdownOpen1"
-     (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave(1)">
-  <a href="javascript:void(0)" class="dropdown-toggle">SCIENTIFIC PROGRAM ▾</a>
-  <div class="dropdown-menu" *ngIf="dropdownOpen1">
-    <a routerLink="/main-program" (click)="menuOpen = false">MAIN PROGRAM</a>
-    <a routerLink="/deformity-correction-course" (click)="menuOpen = false">Cerebral Palsy Course / Workshop</a>
-  </div>
-</div>
+<a routerLink="/main-program" (click)="menuOpen = false">SCIENTIFIC PROGRAM</a>
 
 <!-- Workshops -->
 <div class="nav-item dropdown" [class.open]="dropdownOpen2"
      (mouseenter)="onMouseEnter(2)" (mouseleave)="onMouseLeave(2)">
   <a href="javascript:void(0)" class="dropdown-toggle">WORKSHOPS ▾</a>
   <div class="dropdown-menu" *ngIf="dropdownOpen2">
-    <a routerLink="/pre-conference-workshops" (click)="menuOpen = false">Pre-Conference Workshops</a>
+    <!-- <a routerLink="/pre-conference-workshops" (click)="menuOpen = false">Pre-Conference Workshops</a> -->
+    <a routerLink="/pre-conference-workshops" (click)="menuOpen = false">Hands on Workshop on Club foot Ponseti Method</a>
+        <a routerLink="/deformity-correction-course" (click)="menuOpen = false">Cerebral Palsy Live Reconstructive Surgery Workshop</a>
+        <a routerLink="/deformity-correction-course" (click)="menuOpen = false">Live DDH Surgery Workshop Quetta</a>
+        <a routerLink="/deformity-correction-course" (click)="menuOpen = false">Live DDH Surgery Workshop Sukkar</a>
+        <a routerLink="/deformity-correction-course" (click)="menuOpen = false">Osteogenesis imperfecta symposia, Karachi (Video linked)</a> 
+    
   </div>
 </div>
 

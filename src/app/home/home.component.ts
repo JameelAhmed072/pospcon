@@ -8,10 +8,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class HomeComponent implements OnInit, OnDestroy {
   slides = [
     '/assets/Ziarat_Residency1.JPG',
-    '/assets/princes-of-hope (1).jpg', // Add more image paths here
+    '/assets/Princess of hope AI images.jpeg', // Add more image paths here
     '/assets/quetta.jpg',
     '/assets/princes-of-hope (3).jpg',
-    '/assets/Hana jheel.png'
+    '/assets/Hana jheel.png',
+    '/assets/Quaid e azam tomb.jpeg'
   ];
 
   currentSlide = 0;

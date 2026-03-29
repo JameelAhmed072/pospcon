@@ -1,16 +1,18 @@
-
-<h1>Work in Progress ...</h1>
-
-<!-- <div class="program-container">
+<div class="program-container">
     <section class="hero">
         <h1 class="main-title">{{ title }}</h1>
         <h2 class="conference-code">{{ conferenceCode }}</h2>
-        <p class="dates">{{ conferenceDates }}</p>
+        <p class="dates">{{ conferenceDates }}</p> 
         <p class="venue">{{ venue }}</p>
     </section>
 
     <div *ngFor="let day of days" class="day-block">
-        <h2 class="day-heading">{{ day.label }}: <span class="day-date">{{ day.date }}</span></h2>
+        <div class="day-heading-wrapper">
+            <h2 class="day-heading">
+                <span class="day-label-pill">{{ day.label }}</span>
+                <span class="day-date">{{ day.date }}</span>
+            </h2>
+        </div>
 
         <div *ngIf="day.events" class="table-wrapper">
             <table class="schedule-table">
@@ -18,7 +20,7 @@
                     <tr>
                         <th scope="col" class="time-col">Time</th>
                         <th scope="col">Topic / Event</th>
-                        <th scope="col" class="speaker-col">Speakers</th>
+                        <th scope="col" class="speaker-col">Presentators</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,9 +36,28 @@
         <h3 *ngIf="day.heading" class="section-heading">{{ day.heading }}</h3>
 
         <div *ngFor="let s of day.sessions" class="session-block">
-            <h3 class="session-title">{{ s.name }} <span *ngIf="s.subtitle">— {{ s.subtitle }}</span> <small *ngIf="s.note" class="note">{{ s.note }}</small></h3>
-            <h4 class="session-title">{{s.chairs}} : Prof. Javid Iqbal, Prof. Sikandar Hayat</h4>
-            <h4 class="session-title">{{s.moderator}} : Dr. M.Aslam Mengal</h4>
+            <div class="session-header">
+                <div class="session-title-row">
+                    <span class="session-badge">{{ s.name }}</span>
+                    <span class="session-subtitle-text" *ngIf="s.subtitle">{{ s.subtitle }}</span>
+                    <small *ngIf="s.note" class="note">{{ s.note }}</small>
+                </div>
+                <div *ngIf="s.subheader" class="session-subheader-label">{{ s.subheader }}</div>
+                <div class="officials-bar" *ngIf="s.chairmen || s.co_chairmen || s.moderator">
+                    <div *ngIf="s.chairmen" class="official-item">
+                        <span class="official-label">Chairmen</span>
+                        <span class="official-name">{{ s.chairmen }}</span>
+                    </div>
+                    <div *ngIf="s.co_chairmen" class="official-item">
+                        <span class="official-label">Co-Chairmen</span>
+                        <span class="official-name">{{ s.co_chairmen }}</span>
+                    </div>
+                    <div *ngIf="s.moderator" class="official-item">
+                        <span class="official-label">Moderator</span>
+                        <span class="official-name">{{ s.moderator }}</span>
+                    </div>
+                </div>
+            </div>
             <div class="table-wrapper">
                 <table class="schedule-table">
                     <thead>
@@ -63,4 +84,4 @@
         <ul>
             <li *ngFor="let t of adjustableTopics">{{ t }}</li>
         </ul>
-    </div> -->
+    </div>

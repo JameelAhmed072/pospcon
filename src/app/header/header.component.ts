@@ -14,6 +14,7 @@ export class HeaderComponent {
   dropdownOpen1 = false;
   dropdownOpen2 = false;
   dropdownOpen3 = false;
+  nestedDropdownOpen = false;
 
   goToRegistration() {
     this.router.navigate(['/registration']);

@@ -1,115 +1,81 @@
-
-<h1>Work in Progress ...</h1>
-
-<!-- <div class="course-container">
-  <h1 class="course-title">Cerebral Palsy Workshop</h1>
-  <h2 class="course-subtitle">1st & 2nd April 2026</h2>
-
-  <div class="table-wrapper">
-    <table>
-      <tbody>
-        <tr>
-          <td>8:30</td>
-          <td>Welcome Note</td>
-          <td>Dr. M.Asalam Mengal</td>
-        </tr>
-        <tr>
-          <td>8:35 – 8:45</td>
-          <td>Course Introduction</td>
-          <td>Prof. AnisUddin Bhatti</td>
-        </tr>
-        <tr>
-          <td>8:45 – 8:55</td>
-          <td>CP: Upper limb extremity – Surgical Reconstruction</td>
-          <td>Marc Sinclair (Physical)</td>
-        </tr>
-        <tr>
-          <td>8:55 – 9:05</td>
-          <td>CP: Visual gait analysis & Instrumented 3D Gait Analysis</td>
-          <td>Muharrem Inan (On-line)</td>
-        </tr>
-        <tr>
-          <td>9:05 – 9:15</td>
-          <td>CP: Spastic Diplegia & Hemiplegia: Jump Gait</td>
-          <td>Guney Yilmaz (Physical)</td>
-        </tr>
-        <tr>
-          <td>9:15 – 9:25</td>
-          <td>CP: Spastic Diplegia: Crouch Gait</td>
-          <td>Anisuddin Bhatti</td>
-        </tr>
-        <tr>
-          <td>9:25 – 9:35</td>
-          <td>Debate: CP- Outcome of Early interventional & late reconstruction surgery: Four Questions. Botox. Why we get failure. How to improve at home rehabilitation.</td>
-          <td>Faculty</td>
-        </tr>
-        <tr>
-          <td>9:35 – 9:45</td>
-        
-        </tr>
-        <tr>
-          <td>9:45</td>
-          <td>Case Presentation & Panel Discussion</td>
-          <td>All Faculty</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<br><br><br>
 <div class="course-container">
+    <section class="hero">
+        <h1 class="main-title">{{ title }}</h1>
+        <h2 class="conference-code">{{ courseCode }}</h2>
+        <p class="dates">{{ courseDates }}</p>
+        <p class="venue">{{ venue }}</p>
+    </section>
 
-  <div class="session-block">
-    <div class="session-title">SESSION 1</div>
-    <div class="table-wrapper">
-      <table>
-        <tbody>
-          <tr>
-            <td>8:30</td>
-            <td>Welcome Note</td>
-            <td>Dr. Javed Iqbal</td>
-          </tr>
-          <tr>
-            <td>8:35 – 8:45</td>
-            <td>Course Introduction</td>
-            <td>Dr. Sanjeev Sabharwal</td>
-          </tr>
-          <tr>
-            <td>8:45 – 8:55</td>
-            <td>Managing Limb Deformities in Pakistan – Challenges and Opportunities</td>
-            <td>Haroon Rashid</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-<br><br><br>
-  <div class="session-block">
-    <div class="session-title">SESSION 2</div>
-    <div class="table-wrapper">
-      <table>
-        <tbody>
-          <tr>
-            <td>9:00</td>
-            <td>Common causes of Pediatric Limb Deformities</td>
-            <td>Sanjeev Sabharwal</td>
-          </tr>
-          <tr>
-            <td>9:10</td>
-            <td>Clinical Evaluation of a Child with limb deformity</td>
-            <td>Leo Donnan</td>
-          </tr>
-          <tr>
-            <td>9:20</td>
-            <td>Radiographic Assessment What is Normal</td>
-            <td>Najamuddin</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+    <div *ngFor="let day of days" class="day-block">
+        <div class="day-heading-wrapper">
+            <h2 class="day-heading">
+                <span class="day-label-pill">{{ day.label }}</span>
+                <span class="day-date">{{ day.date }}</span>
+            </h2>
+        </div>
 
+        <div *ngIf="day.events" class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="time-col">Time</th>
+                        <th scope="col">Topic / Event</th>
+                        <th scope="col" class="speaker-col">Presenters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of day.events" [class.break-row]="e.type==='break'" [class.qa-row]="e.type==='qa'">
+                        <td class="time" data-label="Time">{{ e.time || '' }}</td>
+                        <td class="topic" data-label="Topic / Event">{{ e.topic }}</td>
+                        <td class="speaker" data-label="Presenters">{{ e.speaker || '' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 *ngIf="day.heading" class="section-heading">{{ day.heading }}</h3>
+
+        <div *ngFor="let s of day.sessions" class="session-block">
+            <div class="session-header">
+                <div class="session-title-row">
+                    <span class="session-badge">{{ s.name }}</span>
+                    <span class="session-subtitle-text" *ngIf="s.subtitle">{{ s.subtitle }}</span>
+                    <small *ngIf="s.note" class="note">{{ s.note }}</small>
+                </div>
+                <div *ngIf="s.subheader" class="session-subheader-label">{{ s.subheader }}</div>
+                <div class="officials-bar" *ngIf="s.chairmen || s.co_chairmen || s.moderator">
+                    <div *ngIf="s.chairmen" class="official-item">
+                        <span class="official-label">Chairmen</span>
+                        <span class="official-name">{{ s.chairmen }}</span>
+                    </div>
+                    <div *ngIf="s.co_chairmen" class="official-item">
+                        <span class="official-label">Co-Chairmen</span>
+                        <span class="official-name">{{ s.co_chairmen }}</span>
+                    </div>
+                    <div *ngIf="s.moderator" class="official-item">
+                        <span class="official-label">Moderator</span>
+                        <span class="official-name">{{ s.moderator }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="time-col">Time</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col" class="speaker-col">Speakers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let r of s.rows" [class.break-row]="r.type==='break'" [class.qa-row]="r.type==='qa'">
+                            <td class="time" data-label="Time">{{ r.time || '' }}</td>
+                            <td class="topic" data-label="Topic">{{ r.topic }}</td>
+                            <td class="speaker" data-label="Speakers">{{ r.speaker || '' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-
-<h1 class="course-title">2:00 PM – CLOSING AND LUNCH</h1> -->
