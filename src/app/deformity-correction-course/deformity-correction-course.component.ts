@@ -35,7 +35,7 @@ export class DeformityCorrectionCourseComponent {
   title = 'Cerebral Palsy Workshop';
   courseCode = 'POSPCON-2026';
   courseDates = '1st & 2nd April 2026';
-  venue = 'Hotel Serina, Quetta. Baluchistan';
+  venue = 'Jinnah Postgraduate Medical Centre (JPMC), Karachi, Pakistan';
 
   days: CourseDay[] = [
     {

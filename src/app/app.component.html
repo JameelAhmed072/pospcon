@@ -1,8 +1,13 @@
+<!-- Venue Change Announcement Popup -->
+<div class="announcement-overlay" *ngIf="showAnnouncement" (click)="closeOnBackdrop($event)">
+  <div class="announcement-modal">
+    <button class="close-btn" (click)="closeAnnouncement()" aria-label="Close announcement">&times;</button>
+    <img src="assets/notification.jpeg" alt="Venue Change Announcement" class="announcement-img" />
+  </div>
+</div>
+
 <app-header></app-header>
 
-
-
 <router-outlet></router-outlet>
-
 
 <app-footer></app-footer>

@@ -35,7 +35,7 @@ export class MainProgramComponent {
   title = 'Early Scientific program';
   conferenceCode = 'POSPCON-2026';
   conferenceDates = 'Friday & Saturday, 3rd & 4Th April 2026';
-  venue = 'Hotel Serina, Quetta. Baluchistan';
+  venue = 'Jinnah Postgraduate Medical Centre (JPMC), Karachi, Pakistan';
 
   // Program data
   days: ProgramDay[] = [
